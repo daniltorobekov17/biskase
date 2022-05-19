@@ -1,0 +1,73 @@
+.footer {
+  height: 200px;
+  width: 100%;
+  margin: 40px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: black;
+  border-radius: 20px;
+  box-shadow: 0 0 0 0, 0 0 10px 1px #a9a9a990;
+
+
+  &-left {
+    font-family: Gadugi, sans-serif;
+    line-height: 10px;
+    font-size: 24px;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 38px;
+  }
+
+  &-icons {
+    align-items: start;
+    display: flex;
+    column-gap: 16px;
+
+    &-logo {
+      width: 30px;
+    }
+  }
+
+  &-languages, a {
+    display: flex;
+    column-gap: 10px;
+    font-weight: 400;
+    color: black;
+  }
+
+  &-languages a:hover {
+    font-weight: 600;
+    color: orange;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__link {
+    &.active {
+      font-weight: 400;
+      color: darkorange;
+    }
+  }
+
+  &__lnk {
+    &.active {
+      font-weight: 400;
+      color: darkorange;
+    }
+  }
+}
+
+
+

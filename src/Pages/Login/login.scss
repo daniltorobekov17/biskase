@@ -1,0 +1,12 @@
+.login{
+  margin: 0 auto;
+  width: 40%;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 0 0, 0 0 10px 1px #a9a9a990;
+  &-form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+}

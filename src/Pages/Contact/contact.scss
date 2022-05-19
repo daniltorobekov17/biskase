@@ -1,0 +1,54 @@
+.contact-all{
+  display: flex;
+  flex-direction: column;
+  row-gap: 44px;
+}
+
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+
+
+  &-left {
+    border-radius: 20px;
+    box-shadow: 0 0 0 0, 0 0 10px 1px #a9a9a990;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  &-icons {
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 0 0, 0 0 10px 1px #a9a9a990;
+  }
+
+  &-adress {
+    display: flex;
+    column-gap: 5px;
+    font-weight: 400;
+  }
+
+  &-bottom {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    margin-left: 80px;
+
+
+    &-tel {
+      color: black;
+      font-size: 20px;
+    }
+  }
+
+
+}

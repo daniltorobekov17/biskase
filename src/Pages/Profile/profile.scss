@@ -1,0 +1,23 @@
+.profile{
+  margin: 0 auto;
+  width: 40%;
+  background-color: #000000;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 0 0, 0 0 5px 10px #00000030;
+  word-break: break-all;
+}
+.change-profile{
+  width: 40%;
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 0 0, 0 0 5px 10px #00000030;
+}

@@ -1,0 +1,13 @@
+.conditions{
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 0 0  , 0 0 10px 1px #a9a9a990;
+}
+.conditions-services{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.conditions-text{
+  font-weight: 400;
+}

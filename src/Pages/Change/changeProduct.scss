@@ -1,0 +1,35 @@
+.changeProduct{
+  width: 80%;
+  padding: 50px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 0 0 0, 0 0 10px 1px #a9a9a990;
+
+}
+
+.characteristic{
+  max-width: 80%;
+  width: 100%;
+  padding: 50px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 0 0 0, 0 0 10px 1px #a9a9a990;
+
+}
+.characteristic-phone{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+
+.img{
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0 auto;
+}

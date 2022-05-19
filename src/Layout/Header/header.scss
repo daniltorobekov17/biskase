@@ -1,0 +1,89 @@
+
+.header{
+  padding: 10px 0 ;
+  margin-bottom: 50px;
+display: flex;
+  justify-content: center;
+
+  &-navbar{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+  }
+  &-navlink{
+    display: flex;
+    align-items: center;
+  }
+  &-left{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  &-right{
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    margin-left: 30px;
+    &-link{
+      font-weight: 600;
+      color: black;
+      &.active{
+        font-weight: 500;
+        color: darkorange;
+      }
+    }
+  }
+  &-right-icons{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+  }
+&-link{
+  color: white;
+  font-weight: 400;
+  &.active{
+    font-weight: 600;
+    color: orange;
+  }
+}
+
+}
+
+.logo-header{
+  max-width: 60px;
+  width: 100%;
+  border-radius: 30%;
+}
+
+.logo{
+  font-family: Gadugi,sans-serif;
+  line-height: 10px;
+  font-size: 24px;
+  font-style:italic;
+}
+
+
+
+.icon{
+  color: black;
+  &.active{
+    color: darkorange;
+  }
+}
+
+.formControl{
+width: 600px;
+}
+
+.user{
+display: flex;
+  align-items: center;
+  column-gap: 40px;
+
+}
+.userName{
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}

@@ -1,0 +1,96 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Montserrat,sans-serif;
+  font-weight: 600;
+  outline: none;
+  list-style-type: none;
+  text-decoration: none;
+//word-break: break-all;
+}
+
+.container{
+  width: 100%;
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+body{
+  background: #EAEAEA
+}
+input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  cursor:pointer;
+  outline: none;
+font-weight: 400;
+  color: black;
+
+}
+
+.input{
+  color: #EAEAEA;
+  background-color: black;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 0 0 0, 0 0 10px 5px #a9a99990;
+}
+.input:hover{
+  font-weight: 500;
+  color: darkorange;
+}
+.price{
+  font-weight: 600;
+font-size: 13px;
+  color: darkorange;
+}
+button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0 0 0, 0 0 10px 5px #a9a99990;
+  background-color: black;
+  color: #EAEAEA;
+  padding: 10px 0;
+  font-weight: 400;
+cursor: pointer;
+}
+button :hover{
+  color: darkorange;
+  font-weight: 500;
+}
+
+.link{
+  color: #EAEAEA;
+  font-weight: 400;
+  &.active{
+    color: darkorange;
+  }
+}
+.link:hover{
+  color: darkorange;
+  font-weight: 500;
+}
+//p,h2,h3,h5{
+//  word-break: break-all;
+//}
+.burger{
+  display: none;
+}
+@import "Layout/Header/header";
+@import "Layout/Footer/footer";
+@import "Pages/Conditions/conditions";
+@import "Pages/Contact/contact";
+@import "Pages/Home/homePage";
+@import "Pages/AddProducts/addProducts";
+@import "Pages/Login/login";
+@import "Pages/Register/register";
+@import "Pages/Change/changeProduct";
+@import "Pages/Profile/profile";
+@import "Pages/Basket/basket";
+@import "media";

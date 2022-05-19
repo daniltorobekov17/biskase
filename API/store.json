@@ -1,0 +1,143 @@
+{
+  "products": [
+    {
+      "title": "Iphone 11 Pro Max",
+      "price": "45000",
+      "descr": "1",
+      "memory": "1",
+      "image": "https://assets.swappie.com/cdn-cgi/image/width=600,height=600,fit=contain,format=auto/swappie-iphone-12-pro-max-pacific-blue-back.png",
+      "color": "1",
+      "amount": 1,
+      "state": "1",
+      "category": 1,
+      "author": 1,
+      "createData": "19.05.2022, 01:08:21",
+      "id": 16
+    },
+    {
+      "title": "Iphone 12",
+      "price": "60999",
+      "descr": "1",
+      "memory": "32",
+      "image": "https://thegoodguys.sirv.com/products/50073425/50073425_744077.PNG?scale.height=505&scale.width=773&canvas.height=505&canvas.width=773&canvas.opacity=0&q=90",
+      "color": "Черный",
+      "amount": "0",
+      "state": "100/10",
+      "category": 1,
+      "author": 1,
+      "createData": "19.05.2022, 03:36:49",
+      "id": 17
+    },
+    {
+      "title": "Iphone 13 Pro Max",
+      "price": "2",
+      "descr": "1",
+      "memory": "512",
+      "image": "https://cdn.tmobile.com/content/dam/t-mobile/en-p/cell-phones/apple/Apple-iPhone-13-Pro-Max/Alpine-Green/Apple-iPhone-13-Pro-Max-Alpine-Green-frontimage.png",
+      "color": "Green",
+      "amount": "13",
+      "state": "100/10",
+      "category": 1,
+      "author": 1,
+      "createData": "19.05.2022, 03:40:10",
+      "id": 18
+    },
+    {
+      "title": "Samsung S21",
+      "price": "35000",
+      "descr": "Чехол и стекло в подарок",
+      "memory": "256",
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/levant/galaxy-s21/gallery/levant-galaxy-s21-ultra-5g-g988-371058-sm-g998bzkgmea-thumb-368334301?$480_480_PNG$",
+      "color": "Черный",
+      "amount": "8",
+      "state": "Отличное",
+      "category": 2,
+      "author": 1,
+      "createData": "19.05.2022, 18:00:22",
+      "id": 19
+    },
+    {
+      "title": "Redmi",
+      "price": "12000",
+      "descr": "Бесплатная доставка",
+      "memory": "32",
+      "image": "https://i01.appmifile.com/webfile/globalimg/gaoruijia/800/redmi-9-Grey.png",
+      "color": "Black",
+      "amount": "12",
+      "state": "100/100",
+      "category": 3,
+      "author": 1,
+      "createData": "19.05.2022, 18:04:46",
+      "id": 20
+    },
+    {
+      "title": "r",
+      "price": "3",
+      "descr": "3",
+      "memory": "3",
+      "image": "https://mi-shop.com/upload/resize_cache/iblock/f61/445_473_2/f61d28c49e37449781864e7edc9a6d06.jpg",
+      "color": "3",
+      "amount": "13",
+      "state": "3",
+      "category": 2,
+      "author": 1,
+      "createData": "19.05.2022, 22:21:30",
+      "id": 21
+    }
+  ],
+  "users": [
+    {
+      "email": "admin@mail.ru",
+      "name": "ADMIN",
+      "number": "0999 000 555",
+      "password": "$2a$10$FBruaVJGGW0ct8fGaVP0A.5mKVD1AiiGKUg./JIhecSQBYCOHUUE2",
+      "admin": 1,
+      "id": 1
+    },
+    {
+      "email": "user@gmail.com",
+      "password": "$2a$10$v2AiKGbnOdJqpUOMrVSq8OYnk6nD7k51FiRvBThbRK/IFnyCgO4de",
+      "name": "USER",
+      "number": "0 999 222 333",
+      "admin": 1,
+      "id": 2
+    },
+    {
+      "email": "user@mail.ru",
+      "name": "User",
+      "number": "0777 888 888",
+      "password": "$2a$10$yyePV6B/wOEMHq13d0NiF.1aFXOW8H6qsQ5wT0GPvNhLeExFGeXu6",
+      "id": 3
+    },
+    {
+      "email": "user1@gmail.com",
+      "password": "$2a$10$1mHkIhQxaJz.lg7pCwwSGuFdT50kKjQbp74H7r0.15cy/UbWo2tKO",
+      "name": "User",
+      "number": "099999999",
+      "admin": 0,
+      "id": 4
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Iphone"
+    },
+    {
+      "id": 2,
+      "name": "Samsung"
+    },
+    {
+      "id": 3,
+      "name": "Xiaomi"
+    },
+    {
+      "name": "Sony",
+      "id": 4
+    },
+    {
+      "name": "Lenovo",
+      "id": 5
+    }
+  ]
+}
