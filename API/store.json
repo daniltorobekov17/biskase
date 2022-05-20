@@ -136,6 +136,20 @@
       "author": 1,
       "createData": "20.05.2022, 22:17:00",
       "id": 28
+    },
+    {
+      "title": "Samsung s21",
+      "price": "23000",
+      "descr": "Чехол в подарок",
+      "memory": "234",
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/levant/galaxy-s21/gallery/levant-galaxy-s21-ultra-5g-g988-371058-sm-g998bzsgmea-368334319?$2160_1728_PNG$",
+      "color": "black",
+      "amount": 1,
+      "state": "100/10",
+      "category": 2,
+      "author": 5,
+      "createData": "21.05.2022, 05:12:21",
+      "id": 29
     }
   ],
   "users": [
