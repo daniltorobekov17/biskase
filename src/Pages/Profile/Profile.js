@@ -14,9 +14,10 @@ const Profile = () => {
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
     const [open, setOpen] = useState(false);
-
+const [admin,setAdmin]=useState(0);
 
     const handleChangeProfile = () => {
+        setAdmin(user.admin);
         setChange(true);
         setPassword(user.password);
         setEmail(user.email);
@@ -27,6 +28,7 @@ const Profile = () => {
     const handleChangeUser = async () => {
         const res = await axios.put(`http://localhost:8080/users/${user.id}`, {
             email,
+            admin,
             name,
             number,
             password
@@ -86,6 +88,7 @@ const Profile = () => {
 
                             <div style={{display: 'flex', columnGap: '20px'}}>
                                 <button className={'link'} onClick={handleChangeUser}>Сохранить изменения</button>
+                                <button><NavLink className={'link'} to={'/'}>Вернуться на главную</NavLink></button>
 
                             </div>
                         </div>
@@ -100,20 +103,18 @@ const Profile = () => {
                                         <h4 className={'userName'}>Номер телефона : {user?.number}</h4>
                                         <h4 className={'userName'}>Почта : {user?.email}</h4>
                                         <br/>
-                                        <div style={{
+                                        <div className={'profile-buttons'} style={{
                                             display: 'flex',
-                                            rowGap: '30px',
                                             flexDirection: 'column',
-                                            margin: '0 auto'
                                         }}>
-                                            <button className={'link'}
+                                            <button className={'button link'}
                                                     onClick={e => handleChangeProfile(e)}>Редактировать
                                             </button>
-                                            <button><NavLink className={'link'} to={'/'}>Вернуться на главную</NavLink>
+                                            <button className={'button link'}><NavLink className={'link'}  to={'/'}>Вернуться на главную</NavLink>
                                             </button>
 
 
-                                            <button className={'link'}
+                                            <button className={'button link'}
                                                     onClick={() => dispatch({type: 'LOGIN_OUT'}, setOpen(true))}>Выйти
                                             </button>
                                         </div>

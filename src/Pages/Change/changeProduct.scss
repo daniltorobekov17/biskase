@@ -21,8 +21,28 @@
   flex-direction: column;
   row-gap: 30px;
 }
+.changeButton{
+  margin-top: 50px;
+}
 
 
+
+
+.addCart{
+
+  margin-top: 50px;
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
+}
+.show{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.phones-price{
+  font-size: 16px;
+}
 .img{
   width: 40%;
   display: block;

@@ -23,14 +23,7 @@ const Footer = () => {
                     <li className={'footer-list__item'}>
                     <NavLink className={'footer__link'} to={'/conditions'}>Условия сервиса</NavLink></li>
                 </ul>
-                <div className="footer-right">
-                    <div className="footer-languages">
-                        <img src={language} alt="Language logo"/>
-                        <a href="">Каз</a>
-                        <a href="">Рус</a>
-                        <a href="">Eng</a>
-                    </div>
-                </div>
+
                 <div className="footer-icons">
                     <a href="https://vk.com/feed" target={'_blank'}> <img className={'footer-icons-logo'} src={VK}
                                                                           alt=""/></a>

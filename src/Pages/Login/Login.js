@@ -40,9 +40,9 @@ const Login = () => {
         <div className={"container"}>
             <div className={'login'}>
                 <form className={'login-form'} onSubmit={handleLogin}>
-                    <h2 style={{margin: '0 auto'}}>Войти в аккаунт </h2>
+                    <h2 style={{margin: '0 auto'}}>Вход </h2>
                     <hr/>
-                    <TextField
+                    <TextField className={'textfield'}
                         value={email}
                         onChange={e => setEmail(e.target.value)}
                         autoComplete={'off'}
@@ -56,7 +56,7 @@ const Login = () => {
                             ),
                         }}/>
 
-                    <TextField
+                    <TextField className={'textfield'}
                         onChange={e => setPassword(e.target.value)}
                         label="Пароль"
                         type="password"
@@ -65,7 +65,7 @@ const Login = () => {
                     />
 <button onClick={()=>setOpen(true)} className={'input'} type="submit">Войти</button>
 
-                    <p>Нет аккаунта?<Link to={'/register'}>Зарегистрироваться</Link></p>
+                    <p className={'login-text'}>Нет аккаунта?<Link className={'login-text'} to={'/register'}>Зарегистрироваться</Link></p>
                 </form>
             </div>
             <Snackbar

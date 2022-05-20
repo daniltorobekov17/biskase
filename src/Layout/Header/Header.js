@@ -6,83 +6,94 @@ import {NavLink} from "react-router-dom";
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import LocalGroceryStoreSharpIcon from '@mui/icons-material/LocalGroceryStoreSharp';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-
+import AddIcon from '@mui/icons-material/Add';
 import {Context} from "../../Context/Context";
 
 const Header = () => {
     const {user, dispatch} = useContext(Context);
+    const [menu,setMenu] = useState(false);
+
+
 
 
     return (
         <div className="header">
-            <nav className={'header-navbar'}>
-                <div className={'header-left'}>
-                    <div style={{display: 'flex', alignItems: 'center'}}>
-                        <img className={'logo-header'} src={Logo} alt="Bishcase"/>
-                        <h4 className={"logo"}>Bishcase</h4>
+            <div className="container">
+                <nav className={'header-navbar'}>
+                    <div className={'header-left'}>
+                        <div >
+                            <NavLink style={{display: 'flex', alignItems: 'center',color:"black"}} to={'/'}>
+                                <img className={'logo-header'} src={Logo} alt="Bishcase"/>
+                                <h4 className={"logo"}>Bishcase</h4>
+                            </NavLink>
+
+                        </div>
+                        {/*<div className={'header-right'}>*/}
+                        {/*    <NavLink className={'header-right-link'} to={'/contact'}>Контакты</NavLink>*/}
+                        {/*    <NavLink  className={'header-right-link'} to={'/conditions'}>Условия сервиса</NavLink>*/}
+                        {/*</div>*/}
                     </div>
-                    <div className={'header-right'}>
-                        <NavLink className={'header-right-link'} to={'/'}>Главная</NavLink>
-                        <NavLink className={'header-right-link'} to={'/contact'}>Контакты</NavLink>
-                        <NavLink  className={'header-right-link'} to={'/conditions'}>Условия сервиса</NavLink>
 
+                    <nav className={'header-navlink'}>
+                        {
+                            user ?
+                                <div className={'user'}>
+                                    <div className="header-right-icons">
+                                        <NavLink  to={'/basket'}><LocalGroceryStoreSharpIcon
+                                        className={'icon'}/></NavLink>
+                                    </div>
 
-                    </div>
-                </div>
+                                    {user.admin ?
+                                        (
+                                            <div className={'header-create'} style={{display:'flex',columnGap:20}}>
 
-                <nav className={'header-navlink'}>
-                    {
-                        user ?
-                            <div className={'user'}>
-                                <div className="header-right-icons">
-                                    <NavLink className={'icon'} to={'/basket'}><LocalGroceryStoreSharpIcon
-                                        /></NavLink>
-                                </div>
-
-                                {user.admin ?
-                                    (
-                                        <div style={{display:'flex',columnGap:20}}>
-
-                                                <button style={{width:'150px',fontSize:13}} className={'link'}>
+                                                <button style={{width:50}} className={'header-button link'}>
                                                     <NavLink className={'header-link'} to={'/add'}>
-                                                    Добавить товар
+                                                       <AddIcon/>
                                                     </NavLink>
                                                 </button>
-                                            <button style={{width:'150px',fontSize:13}} className={'link'}><NavLink to={'name'} className={'header-link'}>Создать категорию</NavLink></button>
-                                        </div>
+
+                                                <button style={{width:'150px',fontSize:13}} className={'header-button link'}><NavLink to={'name'} className={'header-link'}>Создать категорию</NavLink></button>
+                                            </div>
 
 
 
-                                    ) : ''
-                                }
+                                        ) : ''
+                                    }
 
 
 
-                                    <button style={{fontSize:13}} className={'link'}>
+                                    <button style={{fontSize:13}} className={'profile-button link'}>
                                         <NavLink style={{display:"flex",alignItems:"center"}} className={'header-link'} to={'/profile'}>
-                                        <AccountCircleIcon/>
-                                        Профиль
+                                            <AccountCircleIcon/>
+                                            Профиль
                                         </NavLink>
                                     </button>
 
 
 
-                            </div>
+                                </div>
 
-                            :
-                            <div style={{display: 'flex', columnGap: '20px'}}>
-                                {/*<button><NavLink className={'header-link'} to={'/register'}>Регистрация</NavLink></button>*/}
-                                <button><NavLink className={'header-link'} to={'/login'}>Войти</NavLink></button>
-                            </div>
+                                :
+                                <div style={{display: 'flex', columnGap: '20px'}}>
+                                    {/*<button><NavLink className={'header-link'} to={'/register'}>Регистрация</NavLink></button>*/}
+                                    <button><NavLink className={'header-link'} to={'/login'}>Войти</NavLink></button>
 
-                    }
+                                </div>
+
+                        }
+                        <div  className="burger">
+
+
+
+                            <span className="burger__line"></span>
+                        </div>
+                    </nav>
 
                 </nav>
 
-            </nav>
-            <div className="burger">
-                <span className="burger__line"></span>
             </div>
+
         </div>
 
 

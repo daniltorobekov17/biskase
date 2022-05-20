@@ -39,7 +39,7 @@ const HomePage = () => {
     return (
         <div className={'container'}>
             <div style={{marginBottom: 40}}>
-                <FormControl variant="standard" sx={{m: 1, width: 300}}>
+                <FormControl className={'home-form'} variant="standard" sx={{m: 1}}>
                     <InputLabel id="category">Выберите модель телефона</InputLabel>
                     <Select
                         labelId="category"
@@ -56,14 +56,14 @@ const HomePage = () => {
             </div>
 
             {category === 0 ?
-                <h4 style={{textAlign: 'center', fontSize: 30, marginBottom: 40}}>Все бренды телефонов</h4> : ''}
+                <h4 className={'all-phones'} >Все бренды телефонов</h4> : ''}
 
             <div className="homepage">
                 {category === 0 ?
                     (products.map(product => {
                         return (
-                            <div title={product.title}  className={'products'} key={product.id} style={{display:"flex", flexDirection:"column", rowGap:30,alignContent:"space-evenly"}}>
-                                <p style={{color: 'grey', fontWeight: 400, fontSize: 13}}>{product.createData}</p>
+                            <div title={product.title}  className={'products'} key={product.id}>
+                                <p className={'data'} style={{color: 'grey', fontWeight: 400}}>{product.createData}</p>
                                 <div style={{
                                     display: 'flex',
                                     justifyContent: 'center',
@@ -77,7 +77,7 @@ const HomePage = () => {
                                 </div>
 
                                 <br/>
-                                <div style={{display:"flex",flexDirection:"column",rowGap:30}}>
+                                <div className={'show'}>
                                     <div className={'phone'}>
                                         <h3 className={'products-title text'}>
                                             {product.title}
@@ -91,7 +91,7 @@ const HomePage = () => {
                                     <div style={{display:"flex",justifyContent:"center"}}>
                                         {user?
                                             <Link style={{margin: '0 auto'}} to={`/edit/${product.id}`}>
-                                                <button className={'link'}>Посмотреть</button>
+                                                <button className={'show link'}>Посмотреть</button>
                                             </Link>
                                             :
                                                 <p style={{fontSize:13,textAlign:"center"}}>Чтобы посмотреть товар,Вам необходимо <br/> <Link to={'login'}>ВОЙТИ</Link> в аккаунт</p>
@@ -110,7 +110,7 @@ const HomePage = () => {
                         (
                             products.filter(product => product.category === category).map(product => {
                                 return (
-                                    <div  className={'products'} key={product.id}  style={{display:"flex",flexDirection:"column",rowGap:20,alignContent:"space-evenly"}} >
+                                    <div  className={'category'} key={product.id} >
                                         <p style={{
                                             color: 'grey',
                                             fontWeight: 400,
@@ -138,7 +138,7 @@ const HomePage = () => {
                                         <br/>
                                         {user?
                                             <Link style={{margin: '0 auto'}} to={`/edit/${product.id}`}>
-                                                <button className={'link'}>Посмотреть</button>
+                                                <button className={'show link'}>Посмотреть</button>
                                             </Link>
                                             :
                                             <p style={{fontSize:13,textAlign:"center"}}>Чтобы посмотреть товар,Вам необходимо <br/> <Link to={'login'}>ВОЙТИ</Link> в аккаунт</p>

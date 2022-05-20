@@ -22,7 +22,7 @@ display: flex;
   row-gap: 20px;
   width: 70%;
 text-align: center;
-  padding:20px;
+  padding:50px;
   border-radius: 20px;
   box-shadow: 0 0 0 0, 0 0 10px 1px #a9a9a990;
 }
@@ -37,7 +37,24 @@ display: flex;
     row-gap: 20px;
   }
 }
-
+.basket-btn-bottom{
+  row-gap: 30px;
+}
+.basket-but{
+  width: 400px;
+}
+.basket-null-text{
+  font-size: 30px;
+}
 .title{
   font-size: 16px;
+}
+.basket-null{
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.basket-span{
+  font-size: 13px;
 }

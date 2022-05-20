@@ -88,7 +88,7 @@ const handleClose = (e,reason) =>{
                         autoComplete={'off'}
                         variant="outlined"/>
                     <button className={'input'} type="submit">Зарегистрироваться</button>
-                    <p>Уже есть аккаунт?<Link to={'/login'}>Войти</Link></p>
+                    <p className={'login-text'}>Уже есть аккаунт?<Link className={'login-text'} to={'/login'}>Войти</Link></p>
                 </form>
 
                 <Snackbar

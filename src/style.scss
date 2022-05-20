@@ -83,10 +83,12 @@ button :hover{
   display: none;
 }
 @import "Layout/Header/header";
+@import "Layout/Header/mediaHeader";
 @import "Layout/Footer/footer";
 @import "Pages/Conditions/conditions";
 @import "Pages/Contact/contact";
 @import "Pages/Home/homePage";
+@import "Pages/Home/mediaHome";
 @import "Pages/AddProducts/addProducts";
 @import "Pages/Login/login";
 @import "Pages/Register/register";

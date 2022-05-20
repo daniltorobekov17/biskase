@@ -44,7 +44,7 @@ const [categories,setCategories] = useState([]);
                     variant="outlined"
                     autoComplete={'off'}
                 />
-                <button style={{margin:'0 auto',width:'50%'}} className={'link'} type={'submit'}>Отправить</button>
+                <button style={{maxWidth:'100%',width:'100%'}} className={'link'} type={'submit'}>Отправить</button>
             </form>
 
         </div>

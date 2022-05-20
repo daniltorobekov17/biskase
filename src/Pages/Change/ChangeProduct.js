@@ -32,6 +32,7 @@ const ChangeProduct = () => {
     const {id} = useParams();
     const [open, setOpen] = useState(false);
     const [author, setAuthor] = useState({});
+    const [amount,setAmount] = useState(null);
 const [count,setCount] = useState(1);
 
     useEffect(() => {
@@ -53,6 +54,7 @@ const [count,setCount] = useState(1);
             descr,
             price,
             state,
+            amount,
             image,
             color,
             memory
@@ -68,8 +70,10 @@ const [count,setCount] = useState(1);
     };
     const handleChangeMode = () => {
         setChange(true);
+        setAuthor(author.name)
         setTitle(product.title);
         setPrice(product.price);
+        setAmount(product.amount);
         setImage(product.image);
         setDescr(product.descr);
         setMemory(product.memory);
@@ -130,6 +134,13 @@ const [count,setCount] = useState(1);
                                 onChange={e => setDescr(e.target.value)}
                                 label="Дополнительно" autoComplete={'off'}
                                 variant="outlined"/>
+
+                                <TextField
+                                value={amount}
+                                onChange={e => setAmount(e.target.value)}
+                                label="Количество" autoComplete={'off'}
+                                variant="outlined"/>
+
                             <TextField
                                 value={image}
                                 onChange={e => setImage(e.target.value)}
@@ -151,7 +162,6 @@ const [count,setCount] = useState(1);
                     <div className={'characteristic'}>
                         <div style={{display: 'flex', justifyContent: 'space-between'}}>
                             <h5>@{author.name}</h5>
-                            <p style={{color: 'grey', fontWeight: 400, fontSize: 13}}>{product.createData}</p>
                         </div>
 
                         <div style={{marginBottom: 40}} className={'change-img'}>
@@ -159,23 +169,23 @@ const [count,setCount] = useState(1);
                         </div>
 
                         <div className="phone">
-                            <h2>{product.title}</h2>
-                            <p className={'price'} style={{fontSize: 16}}>{product.price} сом</p>
+                            <h2 className={'phones-name'}>{product.title}</h2>
+                            <p className={'phones-price price'}>{product.price} сом</p>
                         </div>
                         <br/>
-                        <h3 style={{textAlign: 'center', color: 'gray', fontWeight: '400'}}>Характеристика:</h3>
+                        <h3 className={'character'} style={{textAlign: 'center', color: 'gray', fontWeight: '400'}}>Характеристика:</h3>
                         <br/>
                         <div className={'characteristic-phone'}>
-                            <h5>Модель: {product.title} </h5>
-                            <h5>Цвет: <span style={{fontWeight: '400'}}> {product.color}</span></h5>
-                            <h5>Состояние: <span style={{fontWeight: '400'}}>{product.state}</span></h5>
-                            <h5>Объём памяти: <span style={{fontWeight: '400'}}>{product.memory} GB</span></h5>
-                            <h5>Дополнительно: <span style={{fontWeight: '400'}}>{product.descr}</span></h5>
+                            <h5 className={'characteristic-text'}>Модель: {product.title} </h5>
+                            <h5 className={'characteristic-text'}>Цвет: <span className={'characteristic-text'} style={{fontWeight: '400'}}> {product.color}</span></h5>
+                            <h5 className={'characteristic-text'}>Состояние: <span className={'characteristic-text'} style={{fontWeight: '400'}}>{product.state}</span></h5>
+                            <h5 className={'characteristic-text'}>Объём памяти: <span className={'characteristic-text'} style={{fontWeight: '400'}}>{product.memory} GB</span></h5>
+                            <h5 className={'characteristic-text'}>Дополнительно: <span className={'characteristic-text'} style={{fontWeight: '400'}}>{product.descr}</span></h5>
                             {
                                 product.amount >=1 ?
-                                    <h5>В наличии: <span style={{fontWeight: '400'}}>{product.amount}</span></h5>
+                                    <h5 className={'characteristic-text'} >  В наличии: <span style={{fontWeight: '400'}}>{product.amount}</span></h5>
                                     :
-                                    <h5 style={{color: "red"}}>Нет в наличии</h5>
+                                    <h5 className={'characteristic-text'}  style={{color: "red"}}>Нет в наличии</h5>
                             }
 
 
@@ -188,17 +198,16 @@ const [count,setCount] = useState(1);
                                     columnGap: '20px',
                                     justifyContent: 'center'
                                 }}>
-                                    <button className={'link'} onClick={e => handleChangeMode(e)}><EditIcon/>Редактировать
+                                    <button className={'button link'} onClick={e => handleChangeMode(e)}><EditIcon/>Редактировать
                                     </button>
-                                    <button className={'link'} onClick={() => handleDelete(product.id)}><DeleteIcon/>Удалить
+                                    <button className={'button link'} onClick={() => handleDelete(product.id)}><DeleteIcon/>Удалить
                                     </button>
-                                    <button><NavLink className={'link'} to={'/'}>Вернуться на главную</NavLink></button>
+                                    <button className={'button'}><NavLink className={' link'} to={'/'}>Вернуться на главную</NavLink></button>
                                 </div>
                             )
                             :
                             (
-                                <div style={{
-                                    marginTop: "50px",
+                                <div className={'changeButton'} style={{
                                     display: 'flex',
                                     columnGap: '20px',
                                     justifyContent: 'center'
@@ -207,15 +216,10 @@ const [count,setCount] = useState(1);
                                     {
                                         product.amount>=1?
                                             (
-                                                <div style={{
-                                                    marginTop: "50px",
-                                                    display: 'flex',
-                                                    columnGap: '20px',
-                                                    justifyContent: 'center'
-                                                }}>
-                                                    <input min={'1'} max={product.amount} value={count} onChange={(e) => setCount(e.target.value)} title={'Введите количество товаров'} style={{width:'40px',paddingLeft:5,border:"2px solid black"}} type="number"/>
+                                                <div className={'addCart'} >
+                                                    <input className={'amount'} min={'1'} max={product.amount} value={count} onChange={(e) => setCount(e.target.value)} title={'Введите количество товаров'} style={{width:'40px',paddingLeft:5,border:"2px solid black"}} type="number"/>
 
-                                                    <button type={"button"} className={'link'}
+                                                    <button type={"button"} className={'button link'}
                                                             onClick={() => addCart({
                                                                 id:product.id,
                                                                title: product.title,
@@ -229,10 +233,11 @@ const [count,setCount] = useState(1);
                                                             }, setOpen(true))}>
                                                         Добавить в корзину
                                                     </button>
-                                                    <button><NavLink className={'link'} to={'/'}>Вернуться на главную</NavLink></button>
+                                                    <button className={'button'}><NavLink className={'link'} to={'/'}>Вернуться на главную</NavLink></button>
                                                 </div>
                                             ):
-                                            <button><NavLink className={'link'} to={'/'}>Вернуться на главную</NavLink></button>
+
+                                            <button  className={'button'}><NavLink className={'link'} to={'/'}>Вернуться на главную</NavLink></button>
 
 
                                     }
